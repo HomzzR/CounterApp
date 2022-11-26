@@ -10,17 +10,25 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var counterLabel: UILabel!
-    var number = 0
+    private var number = 0 {
+        didSet {
+            counterLabel.text = "Значение счетчика: \(number)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         counterLabel.text = "Значение счетчика: \(number)"
     }
-    
+
     @IBAction func clickButton(_ sender: Any) {
         number += 1
-        counterLabel.text = "Значение счетчика: \(number)"
+    }
+    
+    @IBAction func resetButton(_ sender: Any) {
+        number = 0
+        
     }
 }
+
 
