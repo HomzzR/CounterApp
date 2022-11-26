@@ -20,15 +20,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         counterLabel.text = "Значение счетчика: \(number)"
     }
-
+    
+// MARK: - Кнопка счетчика
     @IBAction func clickButton(_ sender: Any) {
         number += 1
     }
     
+    // MARK: - Кнопка сброса
     @IBAction func resetButton(_ sender: Any) {
         number = 0
         
     }
 }
+
 
 
