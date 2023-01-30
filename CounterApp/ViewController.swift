@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var labelView: UILabel!
-    var score: Int = 0
+    @IBOutlet private weak var labelView: UILabel!
+    private var score: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +18,12 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func resetButton(_ sender: UIButton) {
+    @IBAction private func resetButton(_ sender: UIButton) {
         score = 0
         labelView.text = "Значение счётчика: \(score)"
     }
     
-    @IBAction func buttonClicked(_ sender: UIButton) {
+    @IBAction private func buttonClicked(_ sender: UIButton) {
         score += 1
         labelView.text = "Значение счётчика: \(score)"
     }
